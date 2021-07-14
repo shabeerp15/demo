@@ -77,7 +77,18 @@ function allCheck(){
         return true;
     }
     else{
-        alert("Something Error, Please Check");
+        if(validated.name==false){
+            alert("Name is error");
+        }
+        else if(validated.email==false){
+            alert("Email is error");
+        }
+        else if(validated.phone==false){
+            alert("Mobile is error");
+        }
+        else{
+            alert("Message is error");
+        }
         return false;
     }
 }
