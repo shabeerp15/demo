@@ -1,4 +1,4 @@
-let validated ={
+const validated ={
     name:false,
     email:false,
     phone:false,
@@ -72,6 +72,13 @@ function checkMessage() {
     }
 }
 
-
-
-
+function allCheck(){
+    if(validated.name&&validated.email&&validated.phone&&validated.message){
+        alert("Checking...");
+        return true;
+    }
+    else{
+        alert("Something Error, Please Check");
+        return false;
+    }
+}
