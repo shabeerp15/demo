@@ -263,7 +263,8 @@
     <script>
         $("#submit-form").submit((e) => {
             e.preventDefault()
-            $.ajax({
+            if(allCheck()){
+                $.ajax({
                 url: "https://script.google.com/macros/s/AKfycbxbc5MKeJWSTXsR6Xb6Qd99ALDNmnlniElCQ61u_uCwSS_D178xauSdADE03xD4TRtc/exec",
                 data: $("#submit-form").serialize(),
                 method: "post",
@@ -277,6 +278,7 @@
 
                 }
             })
+            }
         })
     </script>
 
