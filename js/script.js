@@ -1,20 +1,20 @@
 const validated ={
     name:false,
     email:false,
-    phone:false,
+    mobile:false,
     message:false
 }
 
 function nameChek() {
     var nameAlert = document.getElementById('name-alert');
     var name = document.getElementById("name").value;
-    var expression = /^[a-zA-Z\s]*$/;
+    var namePattern = /^[a-zA-Z\s]*$/;
 
     if (name == "") {
         validated.name = false;
         nameAlert.innerHTML = "Required"
 
-    } else if (name.match(expression)) {
+    } else if (name.match(namePattern)) {
         nameAlert.innerHTML = "";
         validated.name = true;
     } else {
@@ -41,18 +41,18 @@ function chekEmail() {
 }
 
 function checkNumber() {
-    var phnPattern = /^\d{10}$/;
-    var phoneNumber = document.getElementById('mobile').value;
-    var phoneAlert = document.getElementById('mobile-alert');
-    if (phoneNumber == "") {
-        validated.phone = false;
-        phoneAlert.innerHTML = "Required";
-    } else if (phoneNumber.match(phnPattern)) {
-        phoneAlert.innerHTML = "";
-        validated.phone = true;
+    var mobPattern = /^\d{10}$/;
+    var mobileNumber = document.getElementById('mobile').value;
+    var mobileAlert = document.getElementById('mobile-alert');
+    if (mobileNumber == "") {
+        validated.mobile = false;
+        mobileAlert.innerHTML = "Required";
+    } else if (phoneNumber.match(mobPattern)) {
+        mobileAlert.innerHTML = "";
+        validated.mobile = true;
     } else {
-        phoneAlert.innerHTML = "Invalid Mobile Number";
-        validated.phone = false
+        mobileAlert.innerHTML = "Invalid Mobile Number";
+        validated.mobile = false
     }
 }
 
