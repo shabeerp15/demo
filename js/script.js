@@ -73,7 +73,7 @@ function checkMessage() {
 }
 
 function allCheck(){
-    if(validated.name&&validated.email&&validated.phone&&validated.message){
+    if(validated.name&&validated.email&&validated.mobile&&validated.message){
         alert("Checking...");
         return true;
     }
