@@ -10,7 +10,7 @@ function nameChek() {
     var name = document.getElementById("name").value;
     var namePattern = /^[a-zA-Z\s]*$/;
 
-    if (name == "") {
+    if (name == "" || name==null) {
         validated.name = false;
         nameAlert.innerHTML = "Required"
 
@@ -28,7 +28,7 @@ function chekEmail() {
     var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     var emailCheck = document.getElementById('email').value;
     var emailAlert = document.getElementById('email-alert');
-    if (emailCheck == "") {
+    if (emailCheck == "" || emailCheck == null) {
         emailAlert.innerHTML = "Required";
         validated.email = false;
     } else if (emailCheck.match(pattern)) {
@@ -44,7 +44,7 @@ function checkNumber() {
     var mobPattern = /^\d{10}$/;
     var mobileNumber = document.getElementById('mobile').value;
     var mobileAlert = document.getElementById('mobile-alert');
-    if (mobileNumber == "") {
+    if (mobileNumber == "" || mobileNumber == null) {
         validated.mobile = false;
         mobileAlert.innerHTML = "Required";
     } else if (phoneNumber.match(mobPattern)) {
