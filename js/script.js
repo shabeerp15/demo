@@ -78,16 +78,16 @@ function allCheck(){
     }
     else{
         if(validated.name==false){
-            alert("Name is error");
+            nameChek();
         }
         else if(validated.email==false){
-            alert("Email is error");
+            chekEmail();
         }
         else if(validated.phone==false){
-            alert("Mobile is error");
+            checkNumber();
         }
         else{
-            alert("Message is error");
+            checkMessage();
         }
         return false;
     }
