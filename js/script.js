@@ -8,13 +8,14 @@ const validated ={
 function nameChek() {
     var nameAlert = document.getElementById('name-alert');
     var name = document.getElementById("name").value;
-    var namePattern = /^[a-zA-Z\s]*$/;
+    var namePattern = /^[a-zA-Z]+ +[a-zA-Z]*$/;
+    var expression2 = /^[a-zA-Z]*$/;
 
     if (name == "" || name==null) {
         validated.name = false;
         nameAlert.innerHTML = "Required"
 
-    } else if (name.match(namePattern)) {
+    } else if (name.match(namePattern) || name.match(expression2) ) {
         nameAlert.innerHTML = "";
         validated.name = true;
     } else {
