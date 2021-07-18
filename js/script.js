@@ -48,7 +48,7 @@ function checkNumber() {
     if (mobileNumber == "" || mobileNumber == null) {
         validated.mobile = false;
         mobileAlert.innerHTML = "Required";
-    } else if (phoneNumber.match(mobPattern)) {
+    } else if (mobileNumber.match(mobPattern)) {
         mobileAlert.innerHTML = "";
         validated.mobile = true;
     } else {
