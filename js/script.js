@@ -90,6 +90,7 @@ function allCheck(){
         else{
             checkMessage();
         }
+        window.location.reload();
         return false;
     }
 }
