@@ -53,7 +53,7 @@ function checkNumber() {
         validated.mobile = true;
     } else {
         mobileAlert.innerHTML = "Invalid Mobile Number";
-        validated.mobile = false
+        validated.mobile = false;
     }
 }
 
