@@ -45,15 +45,27 @@ function checkNumber() {
     var mobPattern = /^\d{10}$/;
     var mobileNumber = document.getElementById('mobile').value;
     var mobileAlert = document.getElementById('mobile-alert');
-    if (mobileNumber == "" || mobileNumber == null) {
-        validated.mobile = false;
-        mobileAlert.innerHTML = "Required";
-    } else if (mobileNumber.match(mobPattern)) {
-        mobileAlert.innerHTML = "";
-        validated.mobile = true;
-    } else {
+    if(mobileNumber.match(/[a-z]/i)){
         mobileAlert.innerHTML = "Invalid Mobile Number";
         validated.mobile = false;
+    }
+    else if(mobileNumber.length <10 && mobileNumber.length >0){
+            mobileAlert.innerHTML = "Enter Minimum 10 Number";
+            validated.mobile = false;
+    }else if(mobileNumber.length > 10){
+            mobileAlert.innerHTML = "Entered out of 10 Numbers";
+            validated.mobile = false;
+    }
+    else if (mobileNumber == "" || mobileNumber == null) {
+        validated.mobile = false;
+        mobileAlert.innerHTML = "Required";
+    } else if (mobileNumber.match(mobPattern) ) {
+        mobileAlert.innerHTML = "";
+        validated.mobile = true;
+    }
+     else {
+        validated.mobile = false;
+         
     }
 }
 
